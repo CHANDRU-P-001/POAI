@@ -1,14 +1,14 @@
 import numpy as np
 
 def temperature_membership(temp):
-    low = max(0, min(1, (25 - temp) / 25))  # 0–25°C
-    medium = max(0, min(1, (temp - 15) / 10, (30 - temp) / 10))  # 15–30°C
-    high = max(0, min(1, (temp - 25) / 15))  # 25°C+
+    low = max(0, min(1, (25 - temp) / 25)) 
+    medium = max(0, min(1, (temp - 15) / 10, (30 - temp) / 10))  
+    high = max(0, min(1, (temp - 25) / 15)) 
     return low, medium, high
 
 def humidity_membership(humidity):
-    low = max(0, min(1, (50 - humidity) / 50))  # 0–50%
-    high = max(0, min(1, (humidity - 50) / 50))  # 50–100%
+    low = max(0, min(1, (50 - humidity) / 50))  
+    high = max(0, min(1, (humidity - 50) / 50)) 
     return low, high
 
 def fuzzy_inference(temp, humidity):
